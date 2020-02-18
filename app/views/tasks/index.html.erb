@@ -1,0 +1,23 @@
+<h2 class="my-3">Tasklist</h2>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Details</th>
+    <th>Status</th>
+  </tr>
+
+  <% @tasks.each do |task| %>
+    <% status = 'Incomplete'.html_safe %>
+    <% status = 'Completed'.html_safe if task.completed == true  %>
+
+    <tr>
+      <td> <a href='tasks/<%= task.id%>'><%= task.title %></a></td>
+      <td><%= task.details %></td>
+      <td> <a href='tasks/<%= task.id%>/done'><%= status %></a></td>
+    </tr>
+
+  <% end %>
+</table>
+
+<%= link_to "New task", :task_new, class: "btn btn-primary m-1" %>

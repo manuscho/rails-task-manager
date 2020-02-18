@@ -1,0 +1,14 @@
+<h2 class="my-3"> <%= @task.title %> </h2>
+
+<br>
+
+<%= @task.details %>
+<br>
+<%= @task.completed %>
+
+<br>
+<br>
+
+<%= link_to "Update task", :task_edit, class: "btn btn-primary m-1" %>
+<%= link_to "Remove task", :task_destroy, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary m-1" %>
+<%= link_to "Back", :task_index, class: "btn btn-primary m-1" %>

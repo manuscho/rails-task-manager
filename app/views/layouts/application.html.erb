@@ -2,14 +2,24 @@
 <html>
   <head>
     <title>RailsTaskManager</title>
+    <meta charset="utf-8" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="background">
+      <h1 class="title">Manuscho Task Manager</h1>
+      <div class="container">
+        <%= yield %>
+      </div>
+      <footer class="page-footer font-small fixed-bottom text-secondary">
+        <div class="footer-copyright text-center py-2">© 2020 Copyright: Manuscho</div>
+      </footer>
+    </div>
   </body>
 </html>
